@@ -1,5 +1,4 @@
-
-
+//Teste
 //Ex.A
 function hello() {
     console.log("Olá Mundo")
