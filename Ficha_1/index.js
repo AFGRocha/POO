@@ -65,5 +65,52 @@ function intervalo(){
     for( let i = num1; i <= num2; i++){
     console.log(i)
     }
+}
+
+//Ex.H
+
+function tabuada(){
+    let num = parseInt(prompt("Indique o número:"))
+
+    for ( let i = 1; i <= 10; i++){
+
+        console.log(num*i)
+    }
+}
+
+//Ex.I
+    function num3(){  
+            let n1 = parseInt(prompt("Escreva o 1º número?"))
+            let n2 = parseInt(prompt("Escreva o 2º número?"))
+            let result
+            for (let i=n1; i<=n2;i++) {
+                if(i % 3 == 0) {
+                    result = result + i
+                }        
+            }
+            console.log("Resultado da soma dos múltiplos de 3: " + result)
+    }
+
+//Ex.J
+
+function primo(){
+
+    let num = parseInt(prompt("Indique o número:"))
+    let primo = true
+    for( let i = 2; i < num; i++){
+        if(num % i == 0)
+        {
+            primo = false
     
+        }
+    }
+
+    if (primo == true){
+        console.log("SIM")
+    }
+
+    else if (primo == false){
+        console.log("NÃO")
+    }
+
 }
