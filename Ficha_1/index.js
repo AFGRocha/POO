@@ -56,7 +56,7 @@ function eco(){
 
 function intervalo(){
     let num1 = parseInt(prompt("Escreva o primeiro número:"))
-    let num2 = parseInt(prompt("Escreva o primeiro número:"))
+    let num2 = parseInt(prompt("Escreva o segundo número:"))
 
     if (num1 > num2)
     {
@@ -82,7 +82,7 @@ function tabuada(){
     function num3(){  
             let n1 = parseInt(prompt("Escreva o 1º número?"))
             let n2 = parseInt(prompt("Escreva o 2º número?"))
-            let result
+            let result = 0
             for (let i=n1; i<=n2;i++) {
                 if(i % 3 == 0) {
                     result = result + i
@@ -114,3 +114,92 @@ function primo(){
     }
 
 }
+
+//Ex.K
+
+function fatorial(){
+
+    let num = parseInt(prompt("Indique o número:"))
+    let result = num
+
+    for(let i = num-1; i > 0; i--){
+        result = result*i
+    }
+
+    console.log(result)
+}
+
+
+//Ex.L
+
+function perfeito(){
+
+    let num = parseInt(prompt("Indique o número"))
+    let result = 0
+
+    for ( let i = 1; i<num;i++ ){
+
+        if (num % i == 0){
+            result = result + i
+        }
+    }   
+
+    if(result == num){
+        console.log("SIM")
+        console.log(result)
+    }
+
+    else{
+        console.log("NÃO")
+        console.log(result)
+    }
+}
+
+//Ex.M
+
+function ano(){
+
+     num = parseInt(prompt("Indique o número:"))
+
+     if ( num % 4 == 0 && num%100 != 0){
+         console.log("É bissexto")
+     }
+
+     else{
+         console.log("Não é bissexto")
+     }
+}
+
+
+//Ex.N
+
+function capicua(){
+
+    let num = prompt("Indique o número:")
+    let result = ""
+
+    for ( let i = num.length-1; i >= 0 ; i--){
+
+        result = result + num.substring(i,i+1)
+       
+    }
+
+    console.log(result)
+    
+    if (num == result){
+        console.log("É uma capicua")
+    }
+
+    else{
+        console.log("Não é uma capicua")
+    }
+}
+
+
+//Ex.O
+function random(){
+   // Gerar nº aleatório entre 1 e 100
+   let genNum = parseInt((Math.random() * 99) + 1)
+   let attempts = 0
+}
+ 
