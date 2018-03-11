@@ -199,7 +199,41 @@ function capicua(){
 //Ex.O
 function random(){
    // Gerar nº aleatório entre 1 e 100
-   let genNum = parseInt((Math.random() * 99) + 1)
-   let attempts = 0
+   let num = parseInt((Math.random() * 99) + 1)
+   console.log("Numero:"+num)
+   let attempts = 1
+   let num2 = parseInt(prompt("Indique o número"))
+
+   
+   while (attempts < 10){
+    if (num2 < num){
+
+        attempts++
+        console.log("MAIOR")
+        
+    }
+
+    else if (num2 > num){
+        attempts++
+        console.log("MENOR")
+    }
+
+    else if ( num2 == num){
+        console.log("Acertou!")
+        break;
+    }
+
+    num2 = parseInt(prompt("Indique o número"))
+
+
+  }
+
+  if (attempts == 10){
+      console.log("Game over")
+  }
+
+  else{
+      console.log("Acabou, clique no butão para jogar outra vez")
+  }
 }
  
