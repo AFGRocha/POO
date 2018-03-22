@@ -133,7 +133,7 @@ let grades = [
     }
     
     function kilo(km){
-        let ratio = (km + 51) / 100
+        let ratio = (km * 51) / 100
         return ratio
     }
 
@@ -157,5 +157,115 @@ let grades = [
         console.log(Car1)
     }
 
+    
 
-   
+
+    //Ex D
+
+
+    class Cyl{
+
+        constructor(altura,raio){
+            this.altura = altura
+            this.raio = raio
+        }
+
+
+        get altura(){
+            return this._altura
+        }
+      
+        set altura(newH){
+            this._altura = newH
+        }
+
+        get raio(){
+            return this._raio
+        }
+      
+        set raio(newR){
+            this._raio = newR
+        }
+
+        getVol(){
+            return this.altura * this.raio * this.raio * 3.1415
+        }
+       
+    }
+
+    function funcD(){
+        let cyl = new Cyl(7,4)
+
+        let vol = cyl.getVol()
+
+        console.log(cyl.altura)
+        console.log(cyl.raio)
+        console.log(vol)
+
+        show("D: Volume = " + vol)
+
+}
+
+
+//Ex E
+
+//Classe Circle
+class Circle{
+
+    //Construtor de objetos do tipo Circle
+    constructor(raio){
+        this.raio = raio
+    }
+
+    //getter da propriedade raio
+    get raio(){
+        return this._raio
+    }
+
+    //setter da propriedade raio
+    set raio(newR){
+        this._raio = newR
+    }
+
+    //Metodo de calculo da area
+    getArea(){
+        return this.raio * this.raio * 3.14
+    }
+    //Metodo de calculo do perimetro
+    getPer(){
+        return 2 * 3.14 *this.raio
+    }
+}
+    
+
+function funcE(){
+
+    let circulo = new Circle(3)
+
+    let per = circulo.getPer()
+
+    let area = circulo.getArea()
+
+    console.log("Area = " + area)
+    console.log("Perimetro = " + per)
+}
+
+
+//Ex F
+
+//Adicionar o metodo de inversao ao prototype
+
+String.prototype.initEnd = function () { 
+
+    let r = ""
+
+    r = this[this.length-1]
+  
+
+    return r
+}
+
+function funcF(){
+
+    console.log("dog".initEnd()) 
+}
