@@ -256,3 +256,91 @@ function funcD(){
   console.log(meuDado.getQuantidadeFaces())
     
 }
+
+
+//Ex 5
+
+
+class Pais{
+
+    constructor(nome,populacao,area){
+        this.nome = nome
+        this.populacao = populacao
+        this.area = area
+    }
+
+      // Propriedade NOME
+      get nome() {
+        return this._nome
+    }
+    set nome(novoNome) {
+        this._nome = novoNome
+    }
+
+    // Propriedade POPULACAO
+    get populacao() {
+        return this._populacao
+    }
+    set populacao(novaPopulacao) {
+        this._populacao = novaPopulacao
+    }
+
+    // Propriedade AREA
+    get area() {
+        return this._area
+    }
+    set area(novaArea) {
+        this._area = novaArea
+    }
+
+    static maiorArea(){
+            let area = 0
+            let nomePais = ""
+
+            for(let i = 0; i < paises.length;i++){
+
+                if (area < paises[i].area){
+                    area = paises[i].area
+                    nomePais= paises[i].nome
+                }
+            }
+
+            return nomePais
+    }
+
+    static maiorPopulacao(){
+
+        let popu = 0
+        let nomePais = ""
+
+        
+        for(let i = 0; i < paises.length;i++){
+
+            if (popu< paises[i].populacao){
+                popu = paises[i].populacao
+                nomePais= paises[i].nome
+            }
+        }
+
+        return nomePais
+    }
+
+}
+
+let paises = []
+
+let meuPais1 = new Pais("Portugal",1032000000,92212)
+let meuPais2 = new Pais("Azerbaijão",9762000000,86600)
+let meuPais3 = new Pais("Armenia",2925000000,29743)
+let meuPais4 = new Pais("Georgia",1043000000,69700)
+let meuPais5 = new Pais("Uzbequistão",3185000000,447400)
+
+paises.push(meuPais1, meuPais2, meuPais3, meuPais4, meuPais5)
+
+
+function funcE(){
+
+   paises.sort()
+
+   console.log(paises)
+}
