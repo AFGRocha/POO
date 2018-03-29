@@ -199,3 +199,60 @@ function funcC(){
     
 
 }
+
+
+//Ex 4
+
+
+
+class Dado{
+
+    constructor(){
+        this.valorFace = 1
+        this._faces = 6
+    }
+
+
+    //Get e Set do valorFace
+
+    get valorFace(){
+        return this._valorFace
+    }
+
+    set valorFace(valor){
+        if (valor <= this._faces && valor > 0){
+            this._valorFace = valor
+
+        }
+        else {
+            console.log("Valor inválido para a face do dado")
+        }   
+    }
+
+    //Rodar o dado
+    rodar(){
+        // Gerar nº aleatório entre 1 e 6 (o numero de faces)
+       this._valorFace = parseInt((Math.random() * (this._faces - 1)) + 1)
+
+       console.log(this.valorFace)
+
+       return this._valorFace
+    }
+
+    //Retorna o numero de faces
+    getQuantidadeFaces() {
+        return this._faces
+    }
+}
+
+
+let meuDado = new Dado()
+
+function funcD(){
+
+    let novaFace = meuDado.rodar()
+
+  console.log(novaFace)
+  console.log(meuDado.getQuantidadeFaces())
+    
+}
