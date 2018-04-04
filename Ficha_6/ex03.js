@@ -51,12 +51,11 @@ function init(){
 
         //string com o que vai conter a tabela
         let str = ""
-        str = "<thead class='thead-dark'><tr><th>ID</th><th>TÍTULO</th><th>ANO</th><th>GÉNERO</th><th>ACÕES</th></tr></thead><tbody>"
+        str = "<thead class='thead-dark'><tr><<th>TÍTULO</th><th>ANO</th><th>GÉNERO</th><th>ACÕES</th></tr></thead><tbody>"
 
         //Atualiza a tabela com o conteudo do array myCollection
         for (let i = 0; i < myCollection.length;i++){
             str += "<tr>"
-            str += "<td>" + counter + "</td>"
             str += "<td>" + myCollection[i].title + "</td>"
             str += "<td>" + myCollection[i].year + "</td>"
             str += "<td>" + myCollection[i].genre + "</td>"
