@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F7 EX2</title>
+    <script src="ex02.js"></script>
+</head>
+<body>
+    
+
+        <form id="myForm" onsubmit="">
+                <p>Nome</p>
+                <input type="text" id="nome" value="" required autofocus>
+                <br>
+                <p>Morada</p>
+                <input type="text" name="Morada" class="auto" id="morada" value="">
+                <br>
+                <p>Telemovel</p>
+                <input type="text" id="telemovel" value="" required>
+                <p>Data de Nascimento</p>
+                <input type="date" name="DataDeNascimento" class="auto" id="bday">
+                <br>
+                <p>Localidade</p>
+                <input type="text" name="Localidade" class="auto" id="localidade" value="">
+                <br>
+                <p>Genero</p>
+                <select class="auto" id="genero">
+                        <option value=""></option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                      </select>
+                <br>
+                <p>Email</p>
+                <input type="email" id="email" value="" accesskey="h" required>
+                <p>User</p>
+                <input type="text" id="user" value="" required>
+                <br>
+                <p>Password</p>
+                <input type="password" id="password" value="" required>
+                <br>
+                <p>Repetir Password</p>
+                <input type="password" id="password2" value="" required>
+                <br>
+                <p>Tamanho da Camisola</p>
+                <select class="auto" id="camisola">
+                        <option value=""></option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                      </select>
+                <br>
+                <p>Nº da Sapatilha</p>
+                <input type="number" class="auto" id="sapatilha" min="30" max="50">
+                <br>
+                <p>Desportos</p>
+                <select class="auto" id="desporto">
+                        <option value=""></option>
+                        <option value="running">Running</option>
+                        <option value="nataçao">Natação</option>
+                      </select>
+                <br>
+                <p>Obeservaçoes</p>
+                 <textarea name="" class="auto" id="txtObs" cols="30" rows="5"></textarea>
+                <br><br>
+                <input type="submit" id="submit" value="Submeter">
+                <br><br>
+                
+        </form>
+</body>
+</html>
