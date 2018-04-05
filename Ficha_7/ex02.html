@@ -10,17 +10,19 @@
 <body>
     
 
-        <form id="myForm" onsubmit="">
+        <form id="myForm" onsubmit="" autocomplete="on">
                 <p>Nome</p>
                 <input type="text" id="nome" value="" required autofocus>
                 <br>
                 <p>Morada</p>
                 <input type="text" name="Morada" class="auto" id="morada" value="">
+                <p>Codigo Postal</p>
+                <p><input type="text" name="Postal" id="postal" value="" minlength="4" maxlength="4"> - <input type="text" name="Postal" id="postal" value="" minlength="3" maxlength="3"></p>
                 <br>
                 <p>Telemovel</p>
-                <input type="text" id="telemovel" value="" required>
+                <input type="number" id="telemovel" value="" min="900000000" max="999999999" required>
                 <p>Data de Nascimento</p>
-                <input type="date" name="DataDeNascimento" class="auto" id="bday">
+                <input type="date" name="DataDeNascimento" class="auto" id="bday" max="2018-4-5">
                 <br>
                 <p>Localidade</p>
                 <input type="text" name="Localidade" class="auto" id="localidade" value="">

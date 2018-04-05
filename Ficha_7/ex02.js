@@ -24,9 +24,10 @@ function init(){
     
 
     if(password.value == password2.value){
-        form.addEventListener("submit", function(){
+        form.addEventListener("submit", function(event){
 
 
+            event.preventDefault()
 
             window.alert("REGISTO EFETUADO COM SUCESSO")
          
