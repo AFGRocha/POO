@@ -147,8 +147,26 @@ function funcF2(){
 
 function funcG(){
 
-}
+    //Variaveis
+    let num = 8053
+    //Calculo das horas
+    let horasTotal = (num / 60) / 60
+    //Converte horas apenas as unidades
+    let intHoras = parseInt(horasTotal)
+    //Calculo dos minutos
+    let minutosTotal = (horasTotal - intHoras) * 60
+    //Converte os minutos apenas as unidades
+    let intMinutos = parseInt(minutosTotal)
+    //Calculo dos segundos restantes
+    let segundos = (minutosTotal - intMinutos) * 60
+     //Converte os segundos apenas as unidades
+    let intSec = parseInt(segundos)
 
+    let str = "Horas: " + intHoras +";" + " Minutos: " +  intMinutos + ";" + " Segundos: " + intSec + ";"
+
+    console.log(str)
+
+}
 
 //Ex H
 function funcH(){
