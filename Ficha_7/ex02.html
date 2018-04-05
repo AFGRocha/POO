@@ -17,22 +17,27 @@
                 <p>Morada</p>
                 <input type="text" name="Morada" class="auto" id="morada" value="">
                 <p>Codigo Postal</p>
-                <p><input type="text" name="Postal" id="postal" value="" minlength="4" maxlength="4"> - <input type="text" name="Postal" id="postal" value="" minlength="3" maxlength="3"></p>
+                <p><input type="text" name="Postal" id="postal" value="" minlength="4" maxlength="4"> - <input type="text" name="Postal" id="postal2" value="" minlength="3" maxlength="3"></p>
                 <br>
                 <p>Telemovel</p>
                 <input type="number" id="telemovel" value="" min="900000000" max="999999999" required>
                 <p>Data de Nascimento</p>
-                <input type="date" name="DataDeNascimento" class="auto" id="bday" max="2018-4-5">
+                <input type="date" id="bday" name="bday" max="">
                 <br>
                 <p>Localidade</p>
-                <input type="text" name="Localidade" class="auto" id="localidade" value="">
+                <input list="locais" id="localidade">
+                <datalist id="locais">
+                  <option value="Porto">
+                  <option value="Vila do Conde">
+                  <option value="Póvoa de Varzim">
+                  <option value="Maia">
+                  <option value="Famalicão">
+                </datalist>
                 <br>
                 <p>Genero</p>
-                <select class="auto" id="genero">
-                        <option value=""></option>
-                        <option value="M">M</option>
-                        <option value="F">F</option>
-                      </select>
+                <input type="radio" name="genero" value="M"> M
+                <input type="radio" name="genero" value="F"> F
+                <br>
                 <br>
                 <p>Email</p>
                 <input type="email" id="email" value="" accesskey="h" required>
@@ -40,10 +45,10 @@
                 <input type="text" id="user" value="" required>
                 <br>
                 <p>Password</p>
-                <input type="password" id="password" value="" required>
+                <input type="password" id="password" value="" required autocomplete="off">
                 <br>
                 <p>Repetir Password</p>
-                <input type="password" id="password2" value="" required>
+                <input type="password" id="password2" value="" required autocomplete="off">
                 <br>
                 <p>Tamanho da Camisola</p>
                 <select class="auto" id="camisola">
@@ -54,18 +59,23 @@
                         <option value="xl">XL</option>
                       </select>
                 <br>
+                <label for="pagina">Página Pessoal</label>
+                <input type="url" name="" id="pagina">
+                <br>
                 <p>Nº da Sapatilha</p>
                 <input type="number" class="auto" id="sapatilha" min="30" max="50">
                 <br>
                 <p>Desportos</p>
-                <select class="auto" id="desporto">
-                        <option value=""></option>
-                        <option value="running">Running</option>
-                        <option value="nataçao">Natação</option>
-                      </select>
+                        Running <input type="checkbox" name="" id="chbRunning">
+                        Cycling <input type="checkbox" name="" id="chbRunning">
+                        Natação <input type="checkbox" name="" id="chbRunning">
+                        Futebol <input type="checkbox" name="" id="chbRunning">
+                        Vela <input type="checkbox" name="" id="chbRunning">
+                        Ténis <input type="checkbox" name="" id="chbRunning">
+                        Outros <input type="checkbox" name="" id="chbRunning">
                 <br>
                 <p>Obeservaçoes</p>
-                 <textarea name="" class="auto" id="txtObs" cols="30" rows="5"></textarea>
+                 <textarea name="" class="auto" id="txtObs" cols="30" rows="10"></textarea>
                 <br><br>
                 <input type="submit" id="submit" value="Submeter">
                 <br><br>
