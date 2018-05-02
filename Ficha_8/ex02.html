@@ -8,16 +8,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
+  
+    <script src="ex02.js"></script>
+
+</head>
   <body>
       
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-3">My Games </h1>
-            <p class="lead">Jumbo helper text</p>
+            <br>
             <hr class="my-2">
 
-            <form action="">
+            <form action="" id="frmGame">
                     <div class="form-row">
                             <div class="form-group col-md-4">
                                     <label for="inputName">Name</label>
@@ -40,15 +43,15 @@
                                     <label class="form-check-label">Platform</label>
                                     <div class="form-check form-check-inline">
                                         
-                                        <input type="checkbox" class="form-check-input"> Steam
+                                        <input type="checkbox" class="form-check-input" value="Steam"> Steam
                                         <br>
-                                        <input type="checkbox" class="form-check-input"> PS4
+                                        <input type="checkbox" class="form-check-input" value="PS4"> PS4
                                         <br>
-                                        <input type="checkbox" class="form-check-input"> XBOX
+                                        <input type="checkbox" class="form-check-input" value="XBOX"> XBOX
                                         <br>
-                                        <input type="checkbox" class="form-check-input"> Wii
+                                        <input type="checkbox" class="form-check-input" value="Wii"> Wii
                                         <br>
-                                        <input type="checkbox" class="form-check-input"> Moblie
+                                        <input type="checkbox" class="form-check-input" value="Mobile"> Mobile
                                           
                                     </div>
                                             
@@ -58,14 +61,51 @@
 
                             
                     </div>
+                    <p class="lead">
+                        <button type="submit" class="btn btn-primary mb-2">Save game</button>
+                        <button type="button" class="btn btn-primary mb-2" id="btnSort">Sort Genre</button>
+                    </p>
             </form>
 
-            <p>More info</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-            </p>
+            <p id="pMsg"></p>
+            <table id="tblGames" class="table"></table>  
+
         </div>
     </div>
+
+
+    <div class="container">      
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                <h1>Nome</h1>
+                <p id="modalName"></p>
+                <h1>Genero</h1>
+                <p id="modalGenre"></p>
+                <h1>Plataformas</h1>
+                <p id="modalPlat"></p>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
 
 
 
